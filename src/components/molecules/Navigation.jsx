@@ -45,10 +45,10 @@ const Navigation = () => {
 <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
 <div className="flex items-center">
-            <div className="w-12 h-12 bg-neumorphic-base rounded-2xl shadow-neumorph flex items-center justify-center">
-              <ApperIcon name="Zap" className="w-7 h-7 text-primary" />
+<div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl shadow-neumorph flex items-center justify-center">
+              <ApperIcon name="Zap" className="w-8 h-8 text-white" />
             </div>
-            <span className="ml-4 text-2xl font-black text-dark font-display">Creative Studio</span>
+            <span className="ml-4 text-2xl font-bold text-dark font-display tracking-tight">Nexus Pro</span>
           </div>
 
           {/* Desktop Navigation */}
