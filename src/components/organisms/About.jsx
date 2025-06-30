@@ -45,9 +45,9 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+className="text-center mb-16"
 >
-<span className="inline-block bg-creative-purple text-white px-8 py-4 text-lg font-bold mb-6">
+<span className="inline-block bg-neumorphic-base text-creative-purple px-8 py-4 text-lg font-bold mb-6 rounded-2xl shadow-neumorph-inset">
             🎨 Creative Studio
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
@@ -72,10 +72,10 @@ const About = () => {
 {stats.map((stat, index) => (
           <div 
             key={index} 
-            className="text-center"
+className="text-center"
           >
-            <div className="w-20 h-20 bg-creative-orange flex items-center justify-center mx-auto mb-6">
-              <ApperIcon name={stat.icon} className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 bg-neumorphic-base rounded-3xl shadow-neumorph flex items-center justify-center mx-auto mb-6">
+              <ApperIcon name={stat.icon} className="w-10 h-10 text-creative-orange" />
             </div>
             <div className="text-4xl font-black text-dark mb-3 font-display">{stat.value}</div>
             <div className="text-gray-600 font-body">{stat.label}</div>
@@ -94,11 +94,11 @@ className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="bg-white p-10 border border-gray-200"
+            className="bg-neumorphic-base p-10 rounded-3xl shadow-neumorph"
           >
-            <div className="w-16 h-16 bg-primary flex items-center justify-center mb-8">
+            <div className="w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph-inset flex items-center justify-center mb-8">
               <ApperIcon name="Target" className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Mission</h3>
@@ -111,11 +111,11 @@ className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
 <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white p-10 border border-gray-200"
+            className="bg-neumorphic-base p-10 rounded-3xl shadow-neumorph"
           >
-            <div className="w-16 h-16 bg-secondary flex items-center justify-center mb-8">
+            <div className="w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph-inset flex items-center justify-center mb-8">
               <ApperIcon name="Heart" className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Values</h3>

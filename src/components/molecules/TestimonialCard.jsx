@@ -9,7 +9,7 @@ const TestimonialCard = ({ testimonial, index }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
 viewport={{ once: true }}
-className="bg-white p-10 border border-gray-200"
+className="bg-neumorphic-base p-10 rounded-3xl shadow-neumorph"
     >
       <div className="text-primary opacity-30 mb-4">
         <ApperIcon name="Quote" className="w-12 h-12" />
@@ -33,11 +33,11 @@ className="bg-white p-10 border border-gray-200"
         "{testimonial.quote}"
       </p>
       
-      <div className="flex items-center">
+<div className="flex items-center">
         <img
 src={testimonial.photo}
           alt={testimonial.clientName}
-          className="w-12 h-12 object-cover mr-4"
+          className="w-12 h-12 object-cover rounded-2xl shadow-neumorph-inset mr-4"
         />
         <div>
           <h4 className="font-semibold text-dark">{testimonial.clientName}</h4>

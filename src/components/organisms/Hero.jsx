@@ -10,19 +10,18 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
-
-  return (
-<section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+return (
+<section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neumorphic-base">
       <div className="container-custom relative z-10">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-6"
+className="mb-6"
 >
 <motion.span 
-              className="inline-block bg-primary text-white px-8 py-4 text-lg font-bold"
+              className="inline-block bg-neumorphic-base text-primary px-8 py-4 text-lg font-bold rounded-2xl shadow-neumorph-inset"
             >
               🎨 Creative Portfolio Studio
             </motion.span>
@@ -87,10 +86,10 @@ const Hero = () => {
 ].map((stat, index) => (
               <motion.div 
 key={index} 
-                className="text-center"
+className="text-center"
               >
-                <div className="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4">
-                  <ApperIcon name={stat.icon} className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-neumorphic-base rounded-3xl shadow-neumorph flex items-center justify-center mx-auto mb-4">
+                  <ApperIcon name={stat.icon} className="w-8 h-8 text-primary" />
                 </div>
                 <div className="text-3xl font-black text-dark mb-2 font-display">{stat.value}</div>
                 <div className="text-sm text-gray-600 font-body">{stat.label}</div>

@@ -9,10 +9,10 @@ const TeamCard = ({ member, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group text-center"
+className="group text-center"
     >
 <div className="relative mb-8">
-        <div className="w-40 h-40 mx-auto overflow-hidden">
+        <div className="w-40 h-40 mx-auto overflow-hidden rounded-3xl shadow-neumorph">
           <img
             src={member.photo}
             alt={member.name}
@@ -38,11 +38,11 @@ const TeamCard = ({ member, index }) => {
           <a
             key={platform}
             href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-className="w-8 h-8 bg-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
+rel="noopener noreferrer"
+className="w-8 h-8 bg-neumorphic-base rounded-xl shadow-neumorph flex items-center justify-center hover:shadow-neumorph-inset transition-all duration-300"
           >
             <ApperIcon 
+              name={platform === 'linkedin' ? 'Linkedin' : platform === 'twitter' ? 'Twitter' : 'Globe'}
               name={platform === 'linkedin' ? 'Linkedin' : platform === 'twitter' ? 'Twitter' : 'Globe'} 
               className="w-4 h-4" 
             />

@@ -42,11 +42,11 @@ const Navigation = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+<div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
 <div className="flex items-center">
-            <div className="w-12 h-12 bg-primary flex items-center justify-center">
-              <ApperIcon name="Zap" className="w-7 h-7 text-white" />
+            <div className="w-12 h-12 bg-neumorphic-base rounded-2xl shadow-neumorph flex items-center justify-center">
+              <ApperIcon name="Zap" className="w-7 h-7 text-primary" />
             </div>
             <span className="ml-4 text-2xl font-black text-dark font-display">Creative Studio</span>
           </div>
@@ -63,8 +63,7 @@ const Navigation = () => {
               </button>
             ))}
           </div>
-
-          {/* Desktop CTA */}
+{/* Desktop CTA */}
 <div className="hidden lg:block">
             <Button 
               variant="primary" 

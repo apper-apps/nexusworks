@@ -44,18 +44,17 @@ const Portfolio = () => {
   if (loading) return <Loading type="portfolio" />
   if (error) return <Error message={error} onRetry={loadPortfolio} />
   if (portfolioItems.length === 0) return <Empty title="No portfolio items available" />
-
 return (
-<section id="portfolio" className="section-padding bg-gray-50">
+<section id="portfolio" className="section-padding bg-neumorphic-base">
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+className="text-center mb-20"
         >
-<span className="inline-block bg-primary text-white px-8 py-3 text-sm font-bold mb-6">
+<span className="inline-block bg-neumorphic-base text-primary px-8 py-3 text-sm font-bold mb-6 rounded-2xl shadow-neumorph-inset">
             ✨ Creative Portfolio
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
@@ -81,12 +80,12 @@ return (
               key={category}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+transition={{ duration: 0.3, delay: index * 0.1 }}
               onClick={() => handleFilterChange(category)}
-              className={`px-8 py-4 font-bold transition-all duration-300 ${
+              className={`px-8 py-4 font-bold rounded-2xl transition-all duration-300 ${
                 activeFilter === category
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-200 hover:border-primary'
+                  ? 'bg-neumorphic-base text-primary shadow-neumorph-inset'
+                  : 'bg-neumorphic-base text-gray-600 shadow-neumorph hover:shadow-neumorph-inset'
               }`}
             >
               {category}

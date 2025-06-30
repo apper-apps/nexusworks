@@ -50,18 +50,17 @@ const Testimonials = () => {
   if (loading) return <Loading />
   if (error) return <Error message={error} onRetry={loadTestimonials} />
   if (testimonials.length === 0) return <Empty title="No testimonials available" />
-
-  return (
-    <section className="section-padding bg-gray-50">
+return (
+    <section className="section-padding bg-neumorphic-base">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+className="text-center mb-16"
 >
-<span className="inline-block bg-creative-indigo text-white px-8 py-4 text-lg font-bold mb-6">
+<span className="inline-block bg-neumorphic-base text-creative-indigo px-8 py-4 text-lg font-bold mb-6 rounded-2xl shadow-neumorph-inset">
             💫 Creative Reviews
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
@@ -89,29 +88,28 @@ const Testimonials = () => {
             </motion.div>
           </div>
 
-          {/* Navigation Arrows */}
+{/* Navigation Arrows */}
 <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-16 h-16 bg-primary flex items-center justify-center hover:bg-primary-dark transition-colors duration-300"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph flex items-center justify-center hover:shadow-neumorph-inset transition-all duration-300"
           >
-            <ApperIcon name="ChevronLeft" className="w-8 h-8 text-white" />
+            <ApperIcon name="ChevronLeft" className="w-8 h-8 text-primary" />
           </button>
-          
 <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-16 h-16 bg-primary flex items-center justify-center hover:bg-primary-dark transition-colors duration-300"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph flex items-center justify-center hover:shadow-neumorph-inset transition-all duration-300"
           >
-            <ApperIcon name="ChevronRight" className="w-8 h-8 text-white" />
+            <ApperIcon name="ChevronRight" className="w-8 h-8 text-primary" />
           </button>
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {testimonials.map((_, index) => (
-              <button
+<button
                 key={index}
 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-primary' : 'bg-gray-300'
+                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-neumorphic-base shadow-neumorph-inset' : 'bg-neumorphic-base shadow-neumorph'
                 }`}
               />
             ))}
@@ -131,11 +129,11 @@ onClick={() => setCurrentSlide(index)}
             {[
               'TechCorp', 'InnovateLabs', 'GlobalSoft', 'DataFlow', 'CloudSync', 'NextGen'
             ].map((company, index) => (
-              <div
+<div
                 key={index}
-className="bg-white p-6 border border-gray-200 flex items-center justify-center h-16"
+className="bg-neumorphic-base p-6 rounded-2xl shadow-neumorph flex items-center justify-center h-16"
               >
-                <span className="font-bold text-gray-400 text-lg">{company}</span>
+                <span className="font-bold text-gray-500 text-lg">{company}</span>
               </div>
             ))}
           </div>

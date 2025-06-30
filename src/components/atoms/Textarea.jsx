@@ -16,12 +16,12 @@ const Textarea = ({
           {required && <span className="text-red-500 ml-1">*</span>}
         </label>
       )}
-      <textarea
+<textarea
         rows={rows}
-className={`w-full px-4 py-3 border focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical ${
+className={`w-full px-4 py-3 bg-neumorphic-base rounded-2xl shadow-neumorph-inset focus:shadow-neumorph transition-all duration-300 resize-vertical border-none focus:outline-none ${
           error 
-            ? 'border-red-300 focus:ring-red-500' 
-            : 'border-gray-300 focus:ring-primary'
+            ? 'text-red-600' 
+            : 'text-primary'
         }`}
         {...props}
       />

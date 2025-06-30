@@ -71,9 +71,9 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+viewport={{ once: true }}
       onSubmit={handleSubmit}
-className="bg-white p-8 border border-gray-200"
+className="bg-neumorphic-base p-8 rounded-3xl shadow-neumorph"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Input

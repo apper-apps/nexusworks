@@ -9,10 +9,10 @@ return (
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group bg-white p-10 border border-gray-200 hover:bg-gray-50 transition-all duration-300"
+      className="group neumorph-card p-10 hover:shadow-neumorph-inset transition-all duration-300"
     >
-      <div className="w-20 h-20 bg-primary flex items-center justify-center mb-8">
-        <ApperIcon name={service.icon} className="w-10 h-10 text-white" />
+      <div className="w-20 h-20 bg-neumorphic-base rounded-3xl shadow-neumorph-inset flex items-center justify-center mb-8">
+        <ApperIcon name={service.icon} className="w-10 h-10 text-primary" />
       </div>
       
 <h3 className="text-2xl font-black text-dark mb-6 font-display">

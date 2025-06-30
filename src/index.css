@@ -14,7 +14,7 @@ body {
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #f8fafc;
+    background: #E2E8F0;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -27,11 +27,11 @@ body {
 
 @layer components {
 .btn-primary {
-    @apply bg-primary text-white font-semibold px-8 py-4 transition-colors duration-300 hover:bg-primary-dark;
+    @apply bg-neumorphic-base text-primary font-semibold px-8 py-4 rounded-2xl shadow-neumorph transition-all duration-300 hover:shadow-neumorph-inset active:shadow-neumorph-inset;
   }
   
   .btn-secondary {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 transition-all duration-300;
+    @apply bg-neumorphic-base text-primary font-semibold px-8 py-4 rounded-2xl shadow-neumorph hover:shadow-neumorph-inset transition-all duration-300;
   }
   
   .section-padding {
@@ -47,11 +47,19 @@ body {
   }
   
   .creative-gradient {
-    @apply bg-gray-100;
+    @apply bg-neumorphic-base;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:bg-gray-50;
+    @apply transition-all duration-300 hover:shadow-neumorph-inset;
+  }
+  
+  .neumorph-card {
+    @apply bg-neumorphic-base rounded-3xl shadow-neumorph transition-all duration-300 hover:shadow-neumorph-sm;
+  }
+  
+  .neumorph-inset {
+    @apply bg-neumorphic-base rounded-2xl shadow-neumorph-inset;
   }
 }
 
@@ -87,10 +95,10 @@ body {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-gray-100;
+:::-webkit-scrollbar-track {
+  @apply bg-neumorphic-base;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-400 rounded-full hover:bg-gray-500;
+:::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full shadow-neumorph-sm hover:shadow-neumorph-inset;
 }

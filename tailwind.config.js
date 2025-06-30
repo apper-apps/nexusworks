@@ -4,44 +4,53 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+theme: {
     extend: {
 colors: {
         primary: {
-          DEFAULT: '#e74c3c',
-          light: '#ec7063',
-          dark: '#c0392b',
+          DEFAULT: '#8B8FA8',
+          light: '#A5A9C1',
+          dark: '#6B7094',
         },
         secondary: {
-          DEFAULT: '#3498db',
-          light: '#5dade2',
-          dark: '#2980b9',
+          DEFAULT: '#9AACB8',
+          light: '#B4C6D2',
+          dark: '#7E929E',
         },
         accent: {
-          DEFAULT: '#2ecc71',
-          light: '#58d68d',
-          dark: '#27ae60',
+          DEFAULT: '#A8C5A3',
+          light: '#C2E0BD',
+          dark: '#8EAA89',
         },
         creative: {
-          purple: '#9b59b6',
-          pink: '#e91e63',
-          orange: '#f39c12',
-          teal: '#1abc9c',
-          indigo: '#3f51b5',
+          purple: '#A89FCE',
+          pink: '#D4A5C7',
+          orange: '#E4C5A0',
+          teal: '#8FB5B1',
+          indigo: '#8791C7',
         },
-        dark: '#2c3e50',
-        light: '#ffffff',
+        dark: '#4A5568',
+        light: '#F7FAFC',
+        neumorphic: {
+          base: '#E2E8F0',
+          light: '#F7FAFC',
+          dark: '#CBD5E0',
+          shadow: {
+            light: '#FFFFFF',
+            dark: '#A0AEC0',
+          }
+        },
         gray: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+          50: '#F7FAFC',
+          100: '#EDF2F7',
+          200: '#E2E8F0',
+          300: '#CBD5E0',
+          400: '#A0AEC0',
+          500: '#718096',
+          600: '#4A5568',
+          700: '#2D3748',
+          800: '#1A202C',
+          900: '#171923',
         }
       },
 fontFamily: {
@@ -52,6 +61,7 @@ fontFamily: {
 animation: {
         'fade-in': 'fadeIn 0.8s ease-out',
         'slide-up': 'slideUp 0.8s ease-out',
+        'float': 'float 3s ease-in-out infinite',
       },
 keyframes: {
         fadeIn: {
@@ -62,6 +72,17 @@ keyframes: {
           '0%': { opacity: '0', transform: 'translateY(30px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+      },
+      boxShadow: {
+        'neumorph': '8px 8px 16px #A0AEC0, -8px -8px 16px #FFFFFF',
+        'neumorph-inset': 'inset 8px 8px 16px #A0AEC0, inset -8px -8px 16px #FFFFFF',
+        'neumorph-sm': '4px 4px 8px #A0AEC0, -4px -4px 8px #FFFFFF',
+        'neumorph-lg': '12px 12px 24px #A0AEC0, -12px -12px 24px #FFFFFF',
+        'neumorph-xl': '20px 20px 40px #A0AEC0, -20px -20px 40px #FFFFFF',
       },
     },
   },
