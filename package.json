@@ -23,7 +23,8 @@
     "react-router-dom": "^6.28.0",
     "react-toastify": "^11.0.5",
     "swiper": "^11.1.14",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "react-particles": "^2.12.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
