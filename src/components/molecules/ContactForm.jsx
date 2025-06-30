@@ -67,13 +67,13 @@ const ContactForm = () => {
   }
 
   return (
-    <motion.form
+<motion.form
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
 viewport={{ once: true }}
       onSubmit={handleSubmit}
-className="bg-neumorphic-base p-8 rounded-3xl shadow-neumorph"
+className="material-card-elevated p-6"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Input

@@ -37,40 +37,40 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
 >
-<span className="inline-block bg-creative-teal text-white px-8 py-4 text-lg font-bold mb-6">
+<span className="inline-block bg-secondary text-white px-6 py-2 text-sm font-medium mb-4 rounded-full">
             🚀 Let's Create Together
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-dark mb-8 leading-tight">
             Ready to Bring Your
-<span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl">Creative Vision to Life?</span>
+<span className="gradient-text block">Creative Vision to Life?</span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-body">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Let's collaborate on something extraordinary. Share your creative dreams and let's 
             transform them into stunning realities that push boundaries and inspire wonder.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6"
           >
 {contactInfo.map((info, index) => (
               <div 
                 key={index} 
-                className="flex items-start space-x-6"
+                className="flex items-start space-x-4"
               >
-                <div className="w-16 h-16 bg-primary flex items-center justify-center flex-shrink-0">
-                  <ApperIcon name={info.icon} className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-primary rounded-lg shadow-elevation-2 flex items-center justify-center flex-shrink-0">
+<ApperIcon name={info.icon} className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-black text-dark mb-3 text-lg font-display">{info.title}</h3>
+                  <h3 className="font-medium text-dark mb-2">{info.title}</h3>
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-600 text-base font-body mb-1">
+                    <p key={idx} className="text-gray-600 text-sm mb-1">
                       {detail}
                     </p>
                   ))}
@@ -78,9 +78,9 @@ const Contact = () => {
               </div>
             ))}
             {/* Social Links */}
-            <div className="pt-8 border-t border-gray-200">
-              <h3 className="font-semibold text-dark mb-4">Follow Us</h3>
-              <div className="flex space-x-4">
+            <div className="pt-6 border-t border-gray-200">
+              <h3 className="font-medium text-dark mb-4">Follow Us</h3>
+              <div className="flex space-x-3">
                 {[
                   { name: 'Linkedin', href: '#' },
                   { name: 'Twitter', href: '#' },
@@ -90,7 +90,7 @@ const Contact = () => {
                   <a
                     key={social.name}
                     href={social.href}
-className="w-10 h-10 bg-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
+className="w-10 h-10 bg-gray-100 rounded-lg shadow-elevation-1 flex items-center justify-center hover:bg-primary hover:text-white hover:shadow-elevation-2 transition-all duration-150"
                   >
                     <ApperIcon name={social.name} className="w-5 h-5" />
                   </a>

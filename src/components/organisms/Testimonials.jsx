@@ -51,28 +51,27 @@ const Testimonials = () => {
   if (error) return <Error message={error} onRetry={loadTestimonials} />
   if (testimonials.length === 0) return <Empty title="No testimonials available" />
 return (
-    <section className="section-padding bg-neumorphic-base">
+<section className="section-padding bg-gray-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
 className="text-center mb-16"
 >
-<span className="inline-block bg-neumorphic-base text-creative-indigo px-8 py-4 text-lg font-bold mb-6 rounded-2xl shadow-neumorph-inset">
+<span className="inline-block bg-material-indigo text-white px-6 py-2 text-sm font-medium mb-4 rounded-full">
             💫 Creative Reviews
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-dark mb-8 leading-tight">
             What Creative Minds
-<span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl">Say About Our Art</span>
+<span className="gradient-text block">Say About Our Art</span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-body">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Discover how we've inspired creators, transformed visions, and pushed the boundaries 
             of what's possible through our experimental and innovative creative approach.
           </p>
         </motion.div>
-
         <div className="relative max-w-4xl mx-auto">
           {/* Testimonial Slider */}
           <div className="overflow-hidden">
@@ -91,15 +90,15 @@ className="text-center mb-16"
 {/* Navigation Arrows */}
 <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph flex items-center justify-center hover:shadow-neumorph-inset transition-all duration-300"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-surface rounded-full shadow-elevation-2 flex items-center justify-center hover:shadow-elevation-3 transition-all duration-150 fab"
           >
-            <ApperIcon name="ChevronLeft" className="w-8 h-8 text-primary" />
+            <ApperIcon name="ChevronLeft" className="w-6 h-6 text-white" />
           </button>
 <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph flex items-center justify-center hover:shadow-neumorph-inset transition-all duration-300"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-surface rounded-full shadow-elevation-2 flex items-center justify-center hover:shadow-elevation-3 transition-all duration-150 fab"
           >
-            <ApperIcon name="ChevronRight" className="w-8 h-8 text-primary" />
+            <ApperIcon name="ChevronRight" className="w-6 h-6 text-white" />
           </button>
 
           {/* Dots Indicator */}
@@ -108,8 +107,8 @@ className="text-center mb-16"
 <button
                 key={index}
 onClick={() => setCurrentSlide(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-neumorphic-base shadow-neumorph-inset' : 'bg-neumorphic-base shadow-neumorph'
+                className={`w-3 h-3 rounded-full transition-all duration-150 ${
+                  index === currentSlide ? 'bg-primary' : 'bg-gray-300'
                 }`}
               />
             ))}
@@ -120,18 +119,18 @@ onClick={() => setCurrentSlide(index)}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.3, delay: 0.15, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-          className="mt-20"
+          className="mt-16"
         >
           <p className="text-center text-gray-600 mb-8">Trusted by leading companies worldwide</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center opacity-60">
             {[
               'TechCorp', 'InnovateLabs', 'GlobalSoft', 'DataFlow', 'CloudSync', 'NextGen'
             ].map((company, index) => (
 <div
                 key={index}
-className="bg-neumorphic-base p-6 rounded-2xl shadow-neumorph flex items-center justify-center h-16"
+className="material-card p-4 flex items-center justify-center h-12"
               >
                 <span className="font-bold text-gray-500 text-lg">{company}</span>
               </div>

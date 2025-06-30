@@ -37,7 +37,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-dark text-white">
+<footer className="bg-gray-900 text-white">
     <div className="container-custom">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -52,7 +52,8 @@ const Footer = () => {
                     y: 0
                 }}
                 transition={{
-                    duration: 0.6
+                    duration: 0.3,
+                    ease: [0.4, 0.0, 0.2, 1]
                 }}
                 viewport={{
                     once: true
@@ -60,15 +61,15 @@ const Footer = () => {
                 className="lg:col-span-1">
                 <div className="flex items-center mb-6">
                     <div
-                        className="w-12 h-12 bg-neumorphic-base rounded-2xl shadow-neumorph flex items-center justify-center">
-                        <ApperIcon name="Zap" className="w-6 h-6 text-primary" />
+                        className="w-12 h-12 bg-primary rounded-lg shadow-elevation-2 flex items-center justify-center">
+                        <ApperIcon name="Zap" className="w-6 h-6 text-white" />
                     </div>
-                    <span className="ml-3 text-xl font-bold">Nexus Pro</span>
+                    <span className="ml-3 text-xl font-medium">Nexus Pro</span>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">Transforming businesses with innovative solutions that drive growth, 
                                   efficiency, and competitive advantage in the digital age.
                                 </p>
-                <div className="flex space-x-4">
+                <div className="flex space-x-3">
                     {[{
                         name: "Linkedin",
                         href: "#"
@@ -82,9 +83,10 @@ const Footer = () => {
                         name: "Instagram",
                         href: "#"
                     }].map(social => <a
+                        key={social.name}
                         href={social.href}
-                        className="w-10 h-10 bg-neumorphic-base rounded-xl shadow-neumorph flex items-center justify-center hover:shadow-neumorph-inset transition-all duration-300">
-                        <ApperIcon name={social.name} className="w-5 h-5 text-primary" />
+                        className="w-10 h-10 bg-gray-800 rounded-lg shadow-elevation-1 flex items-center justify-center hover:shadow-elevation-2 hover:bg-primary transition-all duration-150">
+                        <ApperIcon name={social.name} className="w-5 h-5 text-gray-300 hover:text-white" />
                     </a>)}
                 </div>
             </motion.div>
@@ -142,10 +144,10 @@ const Footer = () => {
                                       </p>
                 </div>
                 <div className="flex gap-4">
-                    <input
+<input
                         type="email"
                         placeholder="Enter your email"
-                        className="flex-1 px-4 py-3 bg-neumorphic-base rounded-2xl shadow-neumorph-inset focus:shadow-neumorph transition-all duration-300 text-primary placeholder-gray-500 border-none focus:outline-none" />
+                        className="flex-1 px-4 py-3 bg-surface rounded border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-150 text-dark placeholder-gray-500 outline-none" />
                     <button className="btn-primary whitespace-nowrap">Subscribe
                                       </button>
                 </div>

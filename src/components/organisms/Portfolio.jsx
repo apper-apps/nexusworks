@@ -45,23 +45,23 @@ const Portfolio = () => {
   if (error) return <Error message={error} onRetry={loadPortfolio} />
   if (portfolioItems.length === 0) return <Empty title="No portfolio items available" />
 return (
-<section id="portfolio" className="section-padding bg-neumorphic-base">
+<section id="portfolio" className="section-padding bg-surface">
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+          transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-className="text-center mb-20"
+className="text-center mb-16"
         >
-<span className="inline-block bg-neumorphic-base text-primary px-8 py-3 text-sm font-bold mb-6 rounded-2xl shadow-neumorph-inset">
+<span className="inline-block bg-secondary-50 text-secondary px-6 py-2 text-sm font-medium mb-4 rounded-full">
             ✨ Creative Portfolio
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-dark mb-8 leading-tight">
             Experimental Projects &
-<span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl">Artistic Visions</span>
+<span className="gradient-text block">Artistic Visions</span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-body">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Dive into our creative universe where innovation meets artistry. Each project 
             tells a unique story of bold experimentation and boundary-pushing design.
           </p>
@@ -71,21 +71,21 @@ className="text-center mb-20"
 <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, staggerChildren: 0.1 }}
+          transition={{ duration: 0.3, staggerChildren: 0.05, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-6 mb-16"
+          className="flex flex-wrap justify-center gap-3 mb-12"
         >
 {categories.map((category, index) => (
             <motion.button
               key={category}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.3, delay: index * 0.1 }}
+transition={{ duration: 0.15, delay: index * 0.05, ease: [0.4, 0.0, 0.2, 1] }}
               onClick={() => handleFilterChange(category)}
-              className={`px-8 py-4 font-bold rounded-2xl transition-all duration-300 ${
+              className={`px-6 py-2 font-medium rounded-full transition-all duration-150 ${
                 activeFilter === category
-                  ? 'bg-neumorphic-base text-primary shadow-neumorph-inset'
-                  : 'bg-neumorphic-base text-gray-600 shadow-neumorph hover:shadow-neumorph-inset'
+                  ? 'bg-primary text-white shadow-elevation-2'
+                  : 'bg-surface text-gray-600 shadow-elevation-1 hover:shadow-elevation-2 hover:bg-primary-50'
               }`}
             >
               {category}

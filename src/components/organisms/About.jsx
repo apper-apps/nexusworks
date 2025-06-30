@@ -47,14 +47,14 @@ const About = () => {
           viewport={{ once: true }}
 className="text-center mb-16"
 >
-<span className="inline-block bg-neumorphic-base text-creative-purple px-8 py-4 text-lg font-bold mb-6 rounded-2xl shadow-neumorph-inset">
+<span className="inline-block bg-accent-50 text-accent px-6 py-2 text-sm font-medium mb-4 rounded-full">
             🎨 Creative Studio
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-dark mb-8 leading-tight">
             Crafting Tomorrow's
-<span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl">Creative Experiences</span>
+<span className="gradient-text block">Creative Experiences</span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-5xl mx-auto leading-relaxed mb-16 font-body">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
             Born from a passion for pushing creative boundaries, our studio has been pioneering 
             experimental design for over a decade. We blend artistic vision with cutting-edge 
             technology to create experiences that inspire, engage, and transform perceptions.
@@ -65,20 +65,20 @@ className="text-center mb-16"
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.1, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
 {stats.map((stat, index) => (
           <div 
             key={index} 
 className="text-center"
           >
-            <div className="w-20 h-20 bg-neumorphic-base rounded-3xl shadow-neumorph flex items-center justify-center mx-auto mb-6">
-              <ApperIcon name={stat.icon} className="w-10 h-10 text-creative-orange" />
+            <div className="w-16 h-16 bg-material-orange rounded-lg shadow-elevation-2 flex items-center justify-center mx-auto mb-4">
+              <ApperIcon name={stat.icon} className="w-8 h-8 text-white" />
             </div>
-            <div className="text-4xl font-black text-dark mb-3 font-display">{stat.value}</div>
-            <div className="text-gray-600 font-body">{stat.label}</div>
+            <div className="text-3xl font-medium text-dark mb-2">{stat.value}</div>
+            <div className="text-gray-600 text-sm">{stat.label}</div>
           </div>
         ))}
       </motion.div>
@@ -96,13 +96,13 @@ className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
             whileInView={{ opacity: 1, x: 0 }}
 transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="bg-neumorphic-base p-10 rounded-3xl shadow-neumorph"
+className="material-card-elevated p-8"
           >
-            <div className="w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph-inset flex items-center justify-center mb-8">
-              <ApperIcon name="Target" className="w-8 h-8 text-white" />
+            <div className="w-14 h-14 bg-primary rounded-lg shadow-elevation-2 flex items-center justify-center mb-6">
+              <ApperIcon name="Target" className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Mission</h3>
-            <p className="text-gray-700 leading-relaxed text-lg font-body">
+            <h3 className="text-2xl font-medium text-dark mb-4">Creative Mission</h3>
+            <p className="text-gray-600 leading-relaxed">
               To revolutionize creative expression through experimental design, innovative technology, 
               and boundary-pushing artistry that challenges conventions and inspires new possibilities 
               in the digital creative landscape.
@@ -111,15 +111,15 @@ transition={{ duration: 0.6, delay: 0.1 }}
 <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-transition={{ duration: 0.6, delay: 0.2 }}
+transition={{ duration: 0.3, delay: 0.1, ease: [0.4, 0.0, 0.2, 1] }}
             viewport={{ once: true }}
-            className="bg-neumorphic-base p-10 rounded-3xl shadow-neumorph"
+            className="material-card-elevated p-8"
           >
-            <div className="w-16 h-16 bg-neumorphic-base rounded-2xl shadow-neumorph-inset flex items-center justify-center mb-8">
-              <ApperIcon name="Heart" className="w-8 h-8 text-white" />
+            <div className="w-14 h-14 bg-secondary rounded-lg shadow-elevation-2 flex items-center justify-center mb-6">
+              <ApperIcon name="Heart" className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Values</h3>
-            <p className="text-gray-700 leading-relaxed text-lg font-body">
+            <h3 className="text-2xl font-medium text-dark mb-4">Creative Values</h3>
+            <p className="text-gray-600 leading-relaxed">
               We embrace experimentation, celebrate uniqueness, and push creative boundaries. 
               Our commitment to artistic innovation drives every project, fostering environments 
               where creativity flourishes and bold ideas become reality.

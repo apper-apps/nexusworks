@@ -11,8 +11,8 @@ const TeamCard = ({ member, index }) => {
       viewport={{ once: true }}
 className="group text-center"
     >
-<div className="relative mb-8">
-        <div className="w-40 h-40 mx-auto overflow-hidden rounded-3xl shadow-neumorph">
+<div className="relative mb-6">
+        <div className="w-32 h-32 mx-auto overflow-hidden rounded-2xl shadow-elevation-2">
           <img
             src={member.photo}
             alt={member.name}
@@ -21,7 +21,7 @@ className="group text-center"
         </div>
       </div>
       
-<h3 className="text-xl font-black text-dark mb-2 font-display">
+<h3 className="text-lg font-medium text-dark mb-2">
         {member.name}
       </h3>
       
@@ -33,13 +33,13 @@ className="group text-center"
         {member.bio}
       </p>
       
-      <div className="flex justify-center space-x-3">
+      <div className="flex justify-center space-x-2">
         {Object.entries(member.social).map(([platform, url]) => (
           <a
             key={platform}
             href={url}
 rel="noopener noreferrer"
-className="w-8 h-8 bg-neumorphic-base rounded-xl shadow-neumorph flex items-center justify-center hover:shadow-neumorph-inset transition-all duration-300"
+className="w-8 h-8 bg-gray-100 rounded-lg shadow-elevation-1 flex items-center justify-center hover:shadow-elevation-2 hover:bg-primary hover:text-white transition-all duration-150"
           >
             <ApperIcon 
               name={platform === 'linkedin' ? 'Linkedin' : platform === 'twitter' ? 'Twitter' : 'Globe'}

@@ -11,17 +11,17 @@ const Hero = () => {
     }
   }
 return (
-<section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neumorphic-base">
+<section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-surface">
       <div className="container-custom relative z-10">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
 className="mb-6"
 >
 <motion.span 
-              className="inline-block bg-neumorphic-base text-primary px-8 py-4 text-lg font-bold rounded-2xl shadow-neumorph-inset"
+              className="inline-block bg-primary-50 text-primary px-6 py-2 text-sm font-medium rounded-full"
             >
               🎨 Creative Portfolio Studio
             </motion.span>
@@ -30,18 +30,18 @@ className="mb-6"
 <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-black text-dark mb-8 leading-none"
+            transition={{ duration: 0.3, delay: 0.1, ease: [0.4, 0.0, 0.2, 1] }}
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-dark mb-6 leading-tight"
           >
             Transform Your Vision
-<span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl xl:text-9xl">Into Creative Magic</span>
+<span className="gradient-text block">Into Creative Magic</span>
           </motion.h1>
           
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+            transition={{ duration: 0.3, delay: 0.2, ease: [0.4, 0.0, 0.2, 1] }}
+            className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             Nexus Pro delivers cutting-edge consulting, development, and strategic services 
             that drive measurable results for modern enterprises. Let's build something extraordinary together.
@@ -50,7 +50,7 @@ className="mb-6"
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.3, delay: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
@@ -75,8 +75,8 @@ className="mb-6"
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            transition={{ duration: 0.3, delay: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
+            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {[
               { icon: 'Users', value: '500+', label: 'Happy Clients' },
@@ -88,11 +88,11 @@ className="mb-6"
 key={index} 
 className="text-center"
               >
-                <div className="w-16 h-16 bg-neumorphic-base rounded-3xl shadow-neumorph flex items-center justify-center mx-auto mb-4">
-                  <ApperIcon name={stat.icon} className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 bg-primary rounded-lg shadow-elevation-2 flex items-center justify-center mx-auto mb-3">
+                  <ApperIcon name={stat.icon} className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-3xl font-black text-dark mb-2 font-display">{stat.value}</div>
-                <div className="text-sm text-gray-600 font-body">{stat.label}</div>
+                <div className="text-2xl font-medium text-dark mb-1">{stat.value}</div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
