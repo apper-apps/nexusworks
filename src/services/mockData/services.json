@@ -1,0 +1,80 @@
+[
+  {
+    "Id": 1,
+    "icon": "Target",
+    "title": "Business Consulting",
+    "description": "Strategic guidance to optimize operations, improve efficiency, and accelerate business growth through data-driven insights and proven methodologies.",
+    "features": [
+      "Strategic planning and execution",
+      "Process optimization and automation",
+      "Performance metrics and KPI tracking",
+      "Market analysis and competitive intelligence",
+      "Risk assessment and mitigation"
+    ]
+  },
+  {
+    "Id": 2,
+    "icon": "Rocket",
+    "title": "Digital Transformation",
+    "description": "Comprehensive digital transformation services that modernize your technology stack, streamline workflows, and enhance customer experiences.",
+    "features": [
+      "Legacy system modernization",
+      "Cloud migration and integration",
+      "Digital workflow automation",
+      "Customer experience optimization",
+      "Data analytics and business intelligence"
+    ]
+  },
+  {
+    "Id": 3,
+    "icon": "Code",
+    "title": "Custom Development",
+    "description": "Tailored software solutions built from the ground up to meet your specific business requirements and industry standards.",
+    "features": [
+      "Web and mobile application development",
+      "API development and integration",
+      "Database design and optimization",
+      "Quality assurance and testing",
+      "Ongoing maintenance and support"
+    ]
+  },
+  {
+    "Id": 4,
+    "icon": "Shield",
+    "title": "Cybersecurity Solutions",
+    "description": "Comprehensive security services to protect your business from cyber threats and ensure compliance with industry regulations.",
+    "features": [
+      "Security audits and assessments",
+      "Threat detection and monitoring",
+      "Data encryption and backup",
+      "Compliance management",
+      "Employee security training"
+    ]
+  },
+  {
+    "Id": 5,
+    "icon": "Cloud",
+    "title": "Cloud Services",
+    "description": "Expert cloud solutions that improve scalability, reduce costs, and enhance collaboration while maintaining security and performance.",
+    "features": [
+      "Cloud architecture design",
+      "Multi-cloud management",
+      "Infrastructure as code",
+      "DevOps and CI/CD pipelines",
+      "Cost optimization strategies"
+    ]
+  },
+  {
+    "Id": 6,
+    "icon": "BarChart3",
+    "title": "Data Analytics",
+    "description": "Transform raw data into actionable insights with advanced analytics, machine learning, and visualization tools.",
+    "features": [
+      "Data warehouse design",
+      "Business intelligence dashboards",
+      "Predictive analytics modeling",
+      "Real-time data processing",
+      "Custom reporting solutions"
+    ]
+  }
+]

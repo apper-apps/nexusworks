@@ -1,0 +1,89 @@
+[
+  {
+    "Id": 1,
+    "name": "Sarah Johnson",
+    "position": "Chief Executive Officer",
+    "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80",
+    "bio": "Visionary leader with 15+ years in digital transformation and strategic business development.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "Id": 2,
+    "name": "Michael Chen",
+    "position": "Chief Technology Officer",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    "bio": "Technology innovator specializing in cloud architecture, AI, and scalable enterprise solutions.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#",
+      "github": "#"
+    }
+  },
+  {
+    "Id": 3,
+    "name": "Emily Rodriguez",
+    "position": "Head of Operations",
+    "photo": "https://images.unsplash.com/photo-1594736797933-d0d7ee0b2e78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80",
+    "bio": "Operations expert focused on process optimization, quality assurance, and client success.",
+    "social": {
+      "linkedin": "#"
+    }
+  },
+  {
+    "Id": 4,
+    "name": "David Thompson",
+    "position": "Lead Developer",
+    "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "bio": "Full-stack developer with expertise in modern web technologies and system architecture.",
+    "social": {
+      "linkedin": "#",
+      "github": "#"
+    }
+  },
+  {
+    "Id": 5,
+    "name": "Lisa Wang",
+    "position": "UX/UI Designer",
+    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "bio": "Creative designer passionate about user-centered design and creating intuitive digital experiences.",
+    "social": {
+      "linkedin": "#",
+      "dribbble": "#"
+    }
+  },
+  {
+    "Id": 6,
+    "name": "Robert Kim",
+    "position": "Data Scientist",
+    "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    "bio": "Data expert specializing in machine learning, predictive analytics, and business intelligence.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "Id": 7,
+    "name": "Amanda Foster",
+    "position": "Business Analyst",
+    "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=961&q=80",
+    "bio": "Strategic analyst with deep expertise in market research, process improvement, and stakeholder management.",
+    "social": {
+      "linkedin": "#"
+    }
+  },
+  {
+    "Id": 8,
+    "name": "James Wilson",
+    "position": "DevOps Engineer",
+    "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    "bio": "Infrastructure specialist focused on automation, continuous integration, and cloud deployment strategies.",
+    "social": {
+      "linkedin": "#",
+      "github": "#"
+    }
+  }
+]

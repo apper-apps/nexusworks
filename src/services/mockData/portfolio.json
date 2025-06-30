@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "title": "Enterprise Resource Planning System",
+    "category": "Enterprise",
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Comprehensive ERP solution for a Fortune 500 manufacturing company, integrating finance, inventory, and production management.",
+    "link": "#"
+  },
+  {
+    "Id": 2,
+    "title": "Digital Banking Platform",
+    "category": "Fintech",
+    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Modern banking application with real-time transactions, advanced security features, and seamless user experience.",
+    "link": "#"
+  },
+  {
+    "Id": 3,
+    "title": "Healthcare Management System",
+    "category": "Healthcare",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Integrated healthcare platform streamlining patient records, appointment scheduling, and medical billing processes.",
+    "link": "#"
+  },
+  {
+    "Id": 4,
+    "title": "E-commerce Marketplace",
+    "category": "E-commerce",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Multi-vendor marketplace with advanced search, payment integration, and comprehensive seller management tools.",
+    "link": "#"
+  },
+  {
+    "Id": 5,
+    "title": "Smart City Infrastructure",
+    "category": "IoT",
+    "image": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "IoT-enabled smart city solution managing traffic flow, energy consumption, and public safety systems.",
+    "link": "#"
+  },
+  {
+    "Id": 6,
+    "title": "Learning Management Platform",
+    "category": "Education",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Comprehensive e-learning platform with interactive courses, progress tracking, and collaborative tools.",
+    "link": "#"
+  },
+  {
+    "Id": 7,
+    "title": "Supply Chain Analytics",
+    "category": "Enterprise",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Advanced analytics dashboard providing real-time insights into supply chain operations and optimization opportunities.",
+    "link": "#"
+  },
+  {
+    "Id": 8,
+    "title": "Cryptocurrency Exchange",
+    "category": "Fintech",
+    "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Secure cryptocurrency trading platform with advanced charting, portfolio management, and automated trading features.",
+    "link": "#"
+  },
+  {
+    "Id": 9,
+    "title": "Telemedicine Application",
+    "category": "Healthcare",
+    "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "description": "Remote healthcare solution enabling virtual consultations, prescription management, and patient monitoring.",
+    "link": "#"
+  }
+]
