@@ -45,21 +45,23 @@ const Portfolio = () => {
   if (error) return <Error message={error} onRetry={loadPortfolio} />
   if (portfolioItems.length === 0) return <Empty title="No portfolio items available" />
 return (
-<section id="portfolio" className="section-padding bg-surface">
+    <section id="portfolio" className="section-padding bg-surface relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tr from-secondary-50/20 via-transparent to-primary-50/30"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-accent-100/20 to-transparent rounded-full transform translate-x-48 -translate-y-48"></div>
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-className="text-center mb-16"
+          className="text-center mb-16"
         >
-<span className="inline-block bg-secondary-50 text-secondary px-6 py-2 text-sm font-medium mb-4 rounded-full">
+          <span className="inline-block bg-secondary-50 text-secondary px-8 py-3 text-sm font-medium mb-4 rounded-full shadow-elevation-1">
             ✨ Creative Portfolio
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-dark mb-8 leading-tight">
             Experimental Projects &
-<span className="gradient-text block">Artistic Visions</span>
+            <span className="gradient-text block">Artistic Visions</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Dive into our creative universe where innovation meets artistry. Each project 
@@ -68,7 +70,7 @@ className="text-center mb-16"
         </motion.div>
 
         {/* Filter Buttons */}
-<motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, staggerChildren: 0.05, ease: [0.4, 0.0, 0.2, 1] }}
@@ -81,11 +83,11 @@ className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.15, delay: index * 0.05, ease: [0.4, 0.0, 0.2, 1] }}
-              onClick={() => handleFilterChange(category)}
-              className={`px-6 py-2 font-medium rounded-full transition-all duration-150 ${
+onClick={() => handleFilterChange(category)}
+              className={`px-8 py-3 font-medium rounded-full transition-all duration-150 ${
                 activeFilter === category
-                  ? 'bg-primary text-white shadow-elevation-2'
-                  : 'bg-surface text-gray-600 shadow-elevation-1 hover:shadow-elevation-2 hover:bg-primary-50'
+                  ? 'bg-primary text-white shadow-elevation-3 scale-105'
+                  : 'bg-surface text-gray-600 shadow-elevation-1 hover:shadow-elevation-2 hover:bg-primary-50 hover:scale-105'
               }`}
             >
               {category}

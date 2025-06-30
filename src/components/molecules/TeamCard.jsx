@@ -12,7 +12,7 @@ const TeamCard = ({ member, index }) => {
 className="group text-center"
     >
 <div className="relative mb-6">
-        <div className="w-32 h-32 mx-auto overflow-hidden rounded-2xl shadow-elevation-2">
+        <div className="w-36 h-36 mx-auto overflow-hidden rounded-full shadow-elevation-3 ring-4 ring-primary-100 hover:ring-primary-200 transition-all duration-300 hover:scale-105">
           <img
             src={member.photo}
             alt={member.name}
@@ -39,11 +39,10 @@ className="group text-center"
             key={platform}
             href={url}
 rel="noopener noreferrer"
-className="w-8 h-8 bg-gray-100 rounded-lg shadow-elevation-1 flex items-center justify-center hover:shadow-elevation-2 hover:bg-primary hover:text-white transition-all duration-150"
+className="w-10 h-10 bg-gray-100 rounded-full shadow-elevation-2 flex items-center justify-center hover:shadow-elevation-3 hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300"
           >
             <ApperIcon 
               name={platform === 'linkedin' ? 'Linkedin' : platform === 'twitter' ? 'Twitter' : 'Globe'}
-              name={platform === 'linkedin' ? 'Linkedin' : platform === 'twitter' ? 'Twitter' : 'Globe'} 
               className="w-4 h-4" 
             />
           </a>

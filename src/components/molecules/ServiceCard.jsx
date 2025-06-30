@@ -9,9 +9,10 @@ return (
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.05, ease: [0.4, 0.0, 0.2, 1] }}
       viewport={{ once: true }}
-      className="group material-card-elevated p-6 hover:shadow-elevation-3 transition-all duration-150"
+className="group material-card-elevated p-6 hover:shadow-elevation-3 transition-all duration-150 relative overflow-hidden"
     >
-      <div className="w-14 h-14 bg-primary rounded-lg shadow-elevation-2 flex items-center justify-center mb-6">
+      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary-100/20 to-transparent rounded-full transform translate-x-10 -translate-y-10"></div>
+      <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-full shadow-elevation-3 flex items-center justify-center mb-6 hover:scale-110 transition-transform duration-300 relative z-10">
         <ApperIcon name={service.icon} className="w-7 h-7 text-white" />
       </div>
       

@@ -67,14 +67,14 @@ className="text-center mb-16"
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-{stats.map((stat, index) => (
+          {stats.map((stat, index) => (
           <div 
             key={index} 
-className="text-center"
+            className="text-center"
           >
-            <div className="w-16 h-16 bg-material-orange rounded-lg shadow-elevation-2 flex items-center justify-center mx-auto mb-4">
+            <div className="w-20 h-20 bg-gradient-to-br from-material-orange to-accent-600 rounded-full shadow-elevation-3 flex items-center justify-center mx-auto mb-4 hover:scale-110 transition-transform duration-300">
               <ApperIcon name={stat.icon} className="w-8 h-8 text-white" />
             </div>
             <div className="text-3xl font-medium text-dark mb-2">{stat.value}</div>
@@ -96,30 +96,32 @@ className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
             whileInView={{ opacity: 1, x: 0 }}
 transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-className="material-card-elevated p-8"
+className="material-card-elevated p-8 relative overflow-hidden"
           >
-            <div className="w-14 h-14 bg-primary rounded-lg shadow-elevation-2 flex items-center justify-center mb-6">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-100/40 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
+            <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-full shadow-elevation-3 flex items-center justify-center mb-6 relative z-10">
               <ApperIcon name="Target" className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-2xl font-medium text-dark mb-4">Creative Mission</h3>
-            <p className="text-gray-600 leading-relaxed">
+            <h3 className="text-2xl font-medium text-dark mb-4 relative z-10">Creative Mission</h3>
+            <p className="text-gray-600 leading-relaxed relative z-10">
               To revolutionize creative expression through experimental design, innovative technology, 
               and boundary-pushing artistry that challenges conventions and inspires new possibilities 
               in the digital creative landscape.
             </p>
           </motion.div>
-<motion.div 
+          <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-transition={{ duration: 0.3, delay: 0.1, ease: [0.4, 0.0, 0.2, 1] }}
+            transition={{ duration: 0.3, delay: 0.1, ease: [0.4, 0.0, 0.2, 1] }}
             viewport={{ once: true }}
-            className="material-card-elevated p-8"
+            className="material-card-elevated p-8 relative overflow-hidden"
           >
-            <div className="w-14 h-14 bg-secondary rounded-lg shadow-elevation-2 flex items-center justify-center mb-6">
+            <div className="absolute bottom-0 left-0 w-28 h-28 bg-gradient-to-tr from-secondary-100/40 to-transparent rounded-full transform -translate-x-14 translate-y-14"></div>
+            <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-dark rounded-full shadow-elevation-3 flex items-center justify-center mb-6 relative z-10">
               <ApperIcon name="Heart" className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-2xl font-medium text-dark mb-4">Creative Values</h3>
-            <p className="text-gray-600 leading-relaxed">
+            <h3 className="text-2xl font-medium text-dark mb-4 relative z-10">Creative Values</h3>
+            <p className="text-gray-600 leading-relaxed relative z-10">
               We embrace experimentation, celebrate uniqueness, and push creative boundaries. 
               Our commitment to artistic innovation drives every project, fostering environments 
               where creativity flourishes and bold ideas become reality.

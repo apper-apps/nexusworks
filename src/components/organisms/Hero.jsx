@@ -65,29 +65,30 @@ return (
         </Swiper>
 
         {/* Custom Navigation */}
-        <button className="swiper-button-prev-custom absolute left-6 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all">
+<button className="swiper-button-prev-custom absolute left-6 top-1/2 transform -translate-y-1/2 z-30 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300">
           <ApperIcon name="ChevronLeft" className="w-6 h-6 text-white" />
         </button>
-        <button className="swiper-button-next-custom absolute right-6 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all">
+        <button className="swiper-button-next-custom absolute right-6 top-1/2 transform -translate-y-1/2 z-30 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300">
           <ApperIcon name="ChevronRight" className="w-6 h-6 text-white" />
         </button>
 
         {/* Custom Pagination */}
-        <div className="swiper-pagination-custom absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2"></div>
+        <div className="swiper-pagination-custom absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-3"></div>
       </div>
 
       {/* Left Content Overlay */}
       <div className="absolute inset-0 z-20 flex items-center">
         <div className="w-full lg:w-1/2 xl:w-2/5">
-          <div className="bg-white/95 backdrop-blur-sm px-8 py-12 sm:px-12 lg:px-16 ml-0 lg:ml-8 xl:ml-12 rounded-r-2xl lg:rounded-l-none lg:rounded-r-3xl shadow-2xl">
+<div className="bg-white/95 backdrop-blur-sm px-8 py-12 sm:px-12 lg:px-16 ml-0 lg:ml-8 xl:ml-12 rounded-r-4xl lg:rounded-l-none lg:rounded-r-5xl shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-100/30 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-              className="mb-6"
+              className="mb-6 relative z-10"
             >
               <motion.span 
-                className="inline-block bg-primary-50 text-primary px-6 py-2 text-sm font-medium rounded-full"
+                className="inline-block bg-primary-50 text-primary px-8 py-3 text-sm font-medium rounded-full shadow-elevation-1"
               >
                 🎨 Creative Portfolio Studio
               </motion.span>
@@ -149,9 +150,9 @@ return (
                 { icon: 'Award', value: '15+', label: 'Years Experience' },
                 { icon: 'CheckCircle', value: '1000+', label: 'Projects Completed' },
                 { icon: 'Star', value: '4.9/5', label: 'Client Rating' }
-              ].map((stat, index) => (
+].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-10 h-10 bg-primary rounded-lg shadow-elevation-2 flex items-center justify-center mx-auto mb-2">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full shadow-elevation-3 flex items-center justify-center mx-auto mb-2 hover:scale-110 transition-transform duration-300">
                     <ApperIcon name={stat.icon} className="w-5 h-5 text-white" />
                   </div>
                   <div className="text-xl font-medium text-dark mb-1">{stat.value}</div>

@@ -55,31 +55,85 @@ line-height: 1.6;
 .gradient-text {
     @apply bg-gradient-to-r from-primary-600 via-accent-400 to-primary-800 bg-clip-text text-transparent;
   }
-  
-  .material-card {
-    @apply bg-neumorphic-base rounded-3xl shadow-neumorph-sm transition-all duration-500 hover:shadow-neumorph;
+.material-card {
+    @apply bg-neumorphic-base rounded-4xl shadow-neumorph-sm transition-all duration-500 hover:shadow-neumorph;
   }
   
   .material-card-elevated {
-    @apply bg-neumorphic-base rounded-3xl shadow-neumorph transition-all duration-500 hover:shadow-neumorph-lg;
+    @apply bg-neumorphic-base rounded-4xl shadow-neumorph transition-all duration-500 hover:shadow-neumorph-lg;
   }
-.material-card-raised {
-    @apply bg-neumorphic-base rounded-3xl shadow-neumorph-lg transition-all duration-500 hover:shadow-elevation-4;
+  
+  .material-card-raised {
+    @apply bg-neumorphic-base rounded-4xl shadow-neumorph-lg transition-all duration-500 hover:shadow-elevation-4;
   }
   
   .fab {
     @apply bg-gradient-to-br from-accent-400 to-accent-600 text-secondary rounded-full shadow-neumorph transition-all duration-300 hover:shadow-neumorph-lg hover:scale-105 active:scale-95;
   }
+  
   .neumorphic-input {
-    @apply bg-neumorphic-base rounded-2xl shadow-neumorph-inset border-none focus:shadow-neumorph transition-all duration-300 px-6 py-4 text-gray-700 placeholder-gray-400;
+    @apply bg-neumorphic-base rounded-3xl shadow-neumorph-inset border-none focus:shadow-neumorph transition-all duration-300 px-6 py-4 text-gray-700 placeholder-gray-400;
   }
   
   .glass-effect {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-4xl;
   }
   
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .section-divider {
+    position: relative;
+  }
+  
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(135deg, transparent 0%, rgba(30, 64, 175, 0.05) 50%, transparent 100%);
+    border-radius: 0 0 50% 50% / 0 0 100px 100px;
+    transform: translateY(-60px);
+  }
+  
+  .curved-bottom {
+    position: relative;
+  }
+  
+  .curved-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: inherit;
+    border-radius: 50% 50% 0 0 / 100px 100px 0 0;
+    transform: translateY(60px);
+  }
+  
+  .flowing-section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .flowing-section::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(135deg, transparent 0%, rgba(251, 191, 36, 0.08) 50%, transparent 100%);
+    border-radius: 50% 50% 0 0 / 60px 60px 0 0;
+    z-index: -1;
+  }
+  
+  .circular-element {
+    @apply rounded-full shadow-elevation-2 transition-all duration-300 hover:shadow-elevation-3;
   }
 }
 

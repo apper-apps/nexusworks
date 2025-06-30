@@ -45,17 +45,18 @@ const Services = () => {
   if (error) return <Error message={error} onRetry={loadServices} />
   if (services.length === 0) return <Empty title="No services available" />
 
-  return (
-<section id="services" className="section-padding bg-background">
-      <div className="container-custom">
+return (
+    <section id="services" className="section-padding bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 via-transparent to-accent-50/20 rounded-6xl transform -skew-y-1"></div>
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-className="text-center mb-16"
+          className="text-center mb-16"
         >
-<span className="inline-block bg-primary-50 text-primary px-6 py-2 text-sm font-medium mb-4 rounded-full">
+          <span className="inline-block bg-primary-50 text-primary px-8 py-3 text-sm font-medium mb-4 rounded-full shadow-elevation-1">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark mb-6">
@@ -86,27 +87,31 @@ className="text-center mb-16"
           viewport={{ once: true }}
 className="text-center mt-16"
         >
-<div className="material-card-elevated p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-dark mb-4">
-              Need a Custom Solution?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Every business is unique. Let's discuss how we can create a tailored solution 
-              that perfectly fits your specific requirements and goals.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary"
-              onClick={() => {
-                const element = document.querySelector('#contact')
-                if (element) element.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              Let's Talk
-            </motion.button>
+          <div className="material-card-elevated p-8 md:p-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-200/30 to-primary-200/30 rounded-full transform translate-x-16 -translate-y-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-primary-200/20 to-accent-200/20 rounded-full transform -translate-x-12 translate-y-12"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-3xl font-bold text-dark mb-4">
+                Need a Custom Solution?
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Every business is unique. Let's discuss how we can create a tailored solution 
+                that perfectly fits your specific requirements and goals.
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary rounded-full px-12"
+                onClick={() => {
+                  const element = document.querySelector('#contact')
+                  if (element) element.scrollIntoView({ behavior: 'smooth' })
+                }}
+              >
+                Let's Talk
+              </motion.button>
+            </div>
           </div>
-</motion.div>
+        </motion.div>
       </div>
 
       <ServiceDetailModal

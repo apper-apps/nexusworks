@@ -9,16 +9,26 @@ import Contact from '@/components/organisms/Contact'
 import Footer from '@/components/organisms/Footer'
 
 const Home = () => {
-  return (
+return (
     <div className="min-h-screen">
       <Navigation />
-      <main>
+      <main className="flowing-sections">
         <Hero />
-        <Services />
-        <Portfolio />
-        <About />
-        <Testimonials />
-        <Contact />
+        <div className="section-divider">
+          <Services />
+        </div>
+        <div className="flowing-section">
+          <Portfolio />
+        </div>
+        <div className="section-divider">
+          <About />
+        </div>
+        <div className="flowing-section">
+          <Testimonials />
+        </div>
+        <div className="curved-bottom">
+          <Contact />
+        </div>
       </main>
       <Footer />
     </div>

@@ -9,9 +9,10 @@ const TestimonialCard = ({ testimonial, index }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3, delay: index * 0.05, ease: [0.4, 0.0, 0.2, 1] }}
 viewport={{ once: true }}
-className="material-card-elevated p-6"
+className="material-card-elevated p-6 relative overflow-hidden"
     >
-      <div className="text-primary opacity-30 mb-4">
+      <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary-50/50 to-transparent rounded-full transform translate-x-12 -translate-y-12"></div>
+      <div className="text-primary opacity-30 mb-4 relative z-10">
         <ApperIcon name="Quote" className="w-10 h-10" />
       </div>
       
@@ -37,7 +38,7 @@ className="material-card-elevated p-6"
         <img
 src={testimonial.photo}
           alt={testimonial.clientName}
-          className="w-10 h-10 object-cover rounded-lg shadow-elevation-1 mr-3"
+          className="w-12 h-12 object-cover rounded-full shadow-elevation-2 mr-3 ring-2 ring-primary-100"
         />
         <div>
           <h4 className="font-medium text-dark">{testimonial.clientName}</h4>

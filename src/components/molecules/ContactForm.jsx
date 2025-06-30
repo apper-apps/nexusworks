@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { toast } from 'react-toastify'
-import { motion } from 'framer-motion'
-import Input from '@/components/atoms/Input'
-import Textarea from '@/components/atoms/Textarea'
-import Button from '@/components/atoms/Button'
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import Textarea from "@/components/atoms/Textarea";
+import Input from "@/components/atoms/Input";
+import Button from "@/components/atoms/Button";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -73,8 +73,11 @@ const ContactForm = () => {
       transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
 viewport={{ once: true }}
       onSubmit={handleSubmit}
-className="material-card-elevated p-6"
+className="material-card-elevated p-8 relative overflow-hidden"
     >
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-50/30 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
+      <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-accent-50/30 to-transparent rounded-full transform -translate-x-12 translate-y-12"></div>
+      <div className="relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Input
           label="Full Name"
@@ -137,12 +140,12 @@ className="material-card-elevated p-6"
           loading={isSubmitting}
           disabled={isSubmitting}
           className="w-full md:w-auto"
-        >
+>
           {isSubmitting ? 'Sending Message...' : 'Send Message'}
         </Button>
       </div>
+      </div>
     </motion.form>
-  )
 }
 
 export default ContactForm

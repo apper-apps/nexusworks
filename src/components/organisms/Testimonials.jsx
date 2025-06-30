@@ -51,21 +51,25 @@ const Testimonials = () => {
   if (error) return <Error message={error} onRetry={loadTestimonials} />
   if (testimonials.length === 0) return <Empty title="No testimonials available" />
 return (
-<section className="section-padding bg-gray-50">
-      <div className="container-custom">
+    <section className="section-padding bg-gray-50 relative overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-material-indigo/10 to-transparent rounded-full transform -translate-x-32 -translate-y-32"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-accent-100/20 to-transparent rounded-full transform translate-x-40 translate-y-40"></div>
+      </div>
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: [0.4, 0.0, 0.2, 1] }}
           viewport={{ once: true }}
-className="text-center mb-16"
->
-<span className="inline-block bg-material-indigo text-white px-6 py-2 text-sm font-medium mb-4 rounded-full">
+          className="text-center mb-16"
+        >
+          <span className="inline-block bg-gradient-to-r from-material-indigo to-material-purple text-white px-8 py-3 text-sm font-medium mb-4 rounded-full shadow-elevation-2">
             💫 Creative Reviews
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-dark mb-8 leading-tight">
             What Creative Minds
-<span className="gradient-text block">Say About Our Art</span>
+            <span className="gradient-text block">Say About Our Art</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Discover how we've inspired creators, transformed visions, and pushed the boundaries 
@@ -88,15 +92,15 @@ className="text-center mb-16"
           </div>
 
 {/* Navigation Arrows */}
-<button
+          <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-surface rounded-full shadow-elevation-2 flex items-center justify-center hover:shadow-elevation-3 transition-all duration-150 fab"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-14 h-14 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full shadow-elevation-3 flex items-center justify-center hover:shadow-elevation-4 hover:scale-110 transition-all duration-300"
           >
             <ApperIcon name="ChevronLeft" className="w-6 h-6 text-white" />
           </button>
-<button
+          <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-surface rounded-full shadow-elevation-2 flex items-center justify-center hover:shadow-elevation-3 transition-all duration-150 fab"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-14 h-14 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full shadow-elevation-3 flex items-center justify-center hover:shadow-elevation-4 hover:scale-110 transition-all duration-300"
           >
             <ApperIcon name="ChevronRight" className="w-6 h-6 text-white" />
           </button>
@@ -106,9 +110,9 @@ className="text-center mb-16"
             {testimonials.map((_, index) => (
 <button
                 key={index}
-onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-150 ${
-                  index === currentSlide ? 'bg-primary' : 'bg-gray-300'
+                onClick={() => setCurrentSlide(index)}
+                className={`w-4 h-4 rounded-full transition-all duration-300 hover:scale-125 ${
+                  index === currentSlide ? 'bg-primary shadow-elevation-2 scale-125' : 'bg-gray-300 hover:bg-gray-400'
                 }`}
               />
             ))}
