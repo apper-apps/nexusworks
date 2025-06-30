@@ -76,9 +76,12 @@ return (
           viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-6 mb-16"
         >
-          {categories.map((category, index) => (
-<button
+{categories.map((category, index) => (
+            <motion.button
               key={category}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
               onClick={() => handleFilterChange(category)}
               className={`px-8 py-4 font-bold transition-all duration-300 ${
                 activeFilter === category

@@ -89,9 +89,15 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
->
-<div className="bg-white p-10 border border-gray-200">
+className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
+        >
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="bg-white p-10 border border-gray-200"
+          >
             <div className="w-16 h-16 bg-primary flex items-center justify-center mb-8">
               <ApperIcon name="Target" className="w-8 h-8 text-white" />
             </div>
@@ -102,8 +108,13 @@ const About = () => {
               in the digital creative landscape.
             </p>
           </motion.div>
-          
-<div className="bg-white p-10 border border-gray-200">
+<motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white p-10 border border-gray-200"
+          >
             <div className="w-16 h-16 bg-secondary flex items-center justify-center mb-8">
               <ApperIcon name="Heart" className="w-8 h-8 text-white" />
             </div>
