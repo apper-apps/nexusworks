@@ -31,12 +31,55 @@ const Hero = () => {
     }
   ];
 
-  return (
-    <section id="home" className="relative h-[800px] overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-        {/* Left Content Panel */}
-        <div className="relative z-10 bg-white/90 backdrop-blur-sm flex items-center">
-          <div className="px-6 sm:px-8 lg:px-12 py-8">
+return (
+    <section id="home" className="relative h-screen overflow-hidden">
+      {/* Fullscreen Background Slider */}
+      <div className="absolute inset-0">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation={{
+            nextEl: '.swiper-button-next-custom',
+            prevEl: '.swiper-button-prev-custom',
+          }}
+          pagination={{
+            el: '.swiper-pagination-custom',
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="h-full"
+        >
+          {heroImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div 
+                className="w-full h-full bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${image.url})` }}
+              >
+                <div className="absolute inset-0 bg-black/40"></div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Custom Navigation */}
+        <button className="swiper-button-prev-custom absolute left-6 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all">
+          <ApperIcon name="ChevronLeft" className="w-6 h-6 text-white" />
+        </button>
+        <button className="swiper-button-next-custom absolute right-6 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all">
+          <ApperIcon name="ChevronRight" className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Custom Pagination */}
+        <div className="swiper-pagination-custom absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2"></div>
+      </div>
+
+      {/* Left Content Overlay */}
+      <div className="absolute inset-0 z-20 flex items-center">
+        <div className="w-full lg:w-1/2 xl:w-2/5">
+          <div className="bg-white/95 backdrop-blur-sm px-8 py-12 sm:px-12 lg:px-16 ml-0 lg:ml-8 xl:ml-12 rounded-r-2xl lg:rounded-l-none lg:rounded-r-3xl shadow-2xl">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -54,7 +97,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1, ease: [0.4, 0.0, 0.2, 1] }}
-              className="text-3xl md:text-4xl lg:text-5xl font-display font-medium text-dark mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-medium text-dark mb-6 leading-tight"
             >
               Transform Your Vision
               <span className="gradient-text block">Into Creative Magic</span>
@@ -118,49 +161,6 @@ const Hero = () => {
             </motion.div>
           </div>
         </div>
-
-        {/* Right Image Slider */}
-        <div className="relative">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            navigation={{
-              nextEl: '.swiper-button-next-custom',
-              prevEl: '.swiper-button-prev-custom',
-            }}
-            pagination={{
-              el: '.swiper-pagination-custom',
-              clickable: true,
-            }}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            className="h-full"
-          >
-            {heroImages.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div 
-                  className="w-full h-full bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url(${image.url})` }}
-                >
-                  <div className="absolute inset-0 bg-black/20"></div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* Custom Navigation */}
-          <button className="swiper-button-prev-custom absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all">
-            <ApperIcon name="ChevronLeft" className="w-6 h-6 text-white" />
-          </button>
-          <button className="swiper-button-next-custom absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all">
-            <ApperIcon name="ChevronRight" className="w-6 h-6 text-white" />
-          </button>
-
-          {/* Custom Pagination */}
-          <div className="swiper-pagination-custom absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2"></div>
-        </div>
       </div>
       
       {/* Scroll indicator */}
@@ -168,12 +168,12 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-8 z-20 lg:left-1/4"
+        className="absolute bottom-8 left-8 z-30"
       >
-        <div className="flex flex-col items-center text-gray-600">
+        <div className="flex flex-col items-center text-white drop-shadow-lg">
           <span className="text-sm mb-2">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
+          <div className="w-6 h-10 border-2 border-white/80 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </motion.div>
