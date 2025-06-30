@@ -4,24 +4,18 @@ import ApperIcon from '@/components/ApperIcon'
 
 const ServiceCard = ({ service, index }) => {
 return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, rotate: -3 }}
-      whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1, type: "spring", bounce: 0.3 }}
+<motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ 
-        scale: 1.05, 
-        rotate: Math.random() > 0.5 ? 2 : -2,
-        y: -10
-      }}
-      className="group bg-gradient-to-br from-white via-primary/5 to-secondary/10 rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 border border-primary/20 relative overflow-hidden"
+      className="group bg-white p-10 border border-gray-200 hover:bg-gray-50 transition-all duration-300"
     >
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-accent/20 to-transparent rounded-full blur-2xl"></div>
-      <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl floating-animation">
+      <div className="w-20 h-20 bg-primary flex items-center justify-center mb-8">
         <ApperIcon name={service.icon} className="w-10 h-10 text-white" />
       </div>
       
-<h3 className="text-2xl font-black text-dark mb-6 group-hover:text-primary transition-colors duration-300 font-display">
+<h3 className="text-2xl font-black text-dark mb-6 font-display">
         {service.title}
       </h3>
       

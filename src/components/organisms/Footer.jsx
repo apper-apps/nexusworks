@@ -50,7 +50,7 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+<div className="w-10 h-10 bg-primary flex items-center justify-center">
                 <ApperIcon name="Zap" className="w-6 h-6 text-white" />
               </div>
               <span className="ml-3 text-xl font-bold">Nexus Pro</span>
@@ -69,7 +69,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200"
+className="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-200"
                 >
                   <ApperIcon name={social.name} className="w-5 h-5" />
                 </a>
@@ -116,10 +116,10 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex gap-4">
-              <input
+<input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400"
               />
               <button className="btn-primary whitespace-nowrap">
                 Subscribe

@@ -10,7 +10,7 @@ const Empty = ({
 }) => {
   return (
     <div className="flex flex-col items-center justify-center p-12 text-center">
-      <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center mb-6">
+<div className="w-20 h-20 bg-primary/10 flex items-center justify-center mb-6">
         <ApperIcon name={icon} className="w-10 h-10 text-primary" />
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>

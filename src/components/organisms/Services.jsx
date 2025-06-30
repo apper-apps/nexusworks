@@ -42,7 +42,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+<span className="inline-block bg-primary text-white px-4 py-2 text-sm font-medium mb-4">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6">
@@ -72,7 +72,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12">
+<div className="bg-gray-100 p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-dark mb-4">
               Need a Custom Solution?
             </h3>

@@ -18,7 +18,7 @@ const Input = ({
       )}
       <input
         type={type}
-        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
+className={`w-full px-4 py-3 border focus:ring-2 focus:ring-primary focus:border-transparent transition-colors ${
           error 
             ? 'border-red-300 focus:ring-red-500' 
             : 'border-gray-300 focus:ring-primary'

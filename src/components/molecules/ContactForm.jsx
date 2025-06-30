@@ -73,7 +73,7 @@ const ContactForm = () => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       onSubmit={handleSubmit}
-      className="bg-white rounded-xl p-8 shadow-lg"
+className="bg-white p-8 border border-gray-200"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Input

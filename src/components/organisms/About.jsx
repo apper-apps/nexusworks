@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import TeamCard from '@/components/molecules/TeamCard'
-import Loading from '@/components/ui/Loading'
-import Error from '@/components/ui/Error'
-import Empty from '@/components/ui/Empty'
-import ApperIcon from '@/components/ApperIcon'
-import { getTeamMembers } from '@/services/api/teamService'
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import ApperIcon from "@/components/ApperIcon";
+import TeamCard from "@/components/molecules/TeamCard";
+import Error from "@/components/ui/Error";
+import Empty from "@/components/ui/Empty";
+import Loading from "@/components/ui/Loading";
+import { getTeamMembers } from "@/services/api/teamService";
 
 const About = () => {
   const [teamMembers, setTeamMembers] = useState([])
@@ -47,16 +47,12 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
 >
-          <motion.span 
-            className="inline-block bg-gradient-to-r from-creative-purple to-creative-pink text-white px-8 py-4 rounded-full text-lg font-bold mb-6 shadow-2xl"
-            whileHover={{ scale: 1.1, rotate: -5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+<span className="inline-block bg-creative-purple text-white px-8 py-4 text-lg font-bold mb-6">
             🎨 Creative Studio
-          </motion.span>
+          </span>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
             Crafting Tomorrow's
-            <span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl transform -rotate-2">Creative Experiences</span>
+<span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl">Creative Experiences</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-5xl mx-auto leading-relaxed mb-16 font-body">
             Born from a passion for pushing creative boundaries, our studio has been pioneering 
@@ -74,20 +70,18 @@ const About = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
         >
 {stats.map((stat, index) => (
-            <motion.div 
-              key={index} 
-              className="text-center"
-              whileHover={{ scale: 1.1, rotate: Math.random() > 0.5 ? 3 : -3 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-creative-orange to-creative-teal rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl floating-animation" style={{ animationDelay: `${index * 0.5}s` }}>
-                <ApperIcon name={stat.icon} className="w-10 h-10 text-white" />
-              </div>
-              <div className="text-4xl font-black text-dark mb-3 font-display">{stat.value}</div>
-              <div className="text-gray-600 font-body">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+          <div 
+            key={index} 
+            className="text-center"
+          >
+            <div className="w-20 h-20 bg-creative-orange flex items-center justify-center mx-auto mb-6">
+              <ApperIcon name={stat.icon} className="w-10 h-10 text-white" />
+            </div>
+            <div className="text-4xl font-black text-dark mb-3 font-display">{stat.value}</div>
+            <div className="text-gray-600 font-body">{stat.label}</div>
+          </div>
+        ))}
+      </motion.div>
 
         {/* Mission & Values */}
         <motion.div
@@ -97,13 +91,8 @@ const About = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
 >
-          <motion.div 
-            className="bg-gradient-to-br from-primary/10 via-white to-secondary/10 rounded-3xl p-10 shadow-2xl relative overflow-hidden"
-            whileHover={{ scale: 1.02, rotate: 1 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-creative-pink/20 to-transparent rounded-full blur-2xl"></div>
-            <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-8 floating-animation">
+<div className="bg-white p-10 border border-gray-200">
+            <div className="w-16 h-16 bg-primary flex items-center justify-center mb-8">
               <ApperIcon name="Target" className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Mission</h3>
@@ -114,13 +103,8 @@ const About = () => {
             </p>
           </motion.div>
           
-          <motion.div 
-            className="bg-gradient-to-br from-secondary/10 via-white to-accent/10 rounded-3xl p-10 shadow-2xl relative overflow-hidden"
-            whileHover={{ scale: 1.02, rotate: -1 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          >
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-creative-teal/20 to-transparent rounded-full blur-2xl"></div>
-            <div className="w-16 h-16 bg-gradient-to-br from-secondary to-creative-orange rounded-2xl flex items-center justify-center mb-8 floating-animation" style={{ animationDelay: '1s' }}>
+<div className="bg-white p-10 border border-gray-200">
+            <div className="w-16 h-16 bg-secondary flex items-center justify-center mb-8">
               <ApperIcon name="Heart" className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Values</h3>

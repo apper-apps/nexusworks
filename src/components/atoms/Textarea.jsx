@@ -18,7 +18,7 @@ const Textarea = ({
       )}
       <textarea
         rows={rows}
-        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical ${
+className={`w-full px-4 py-3 border focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical ${
           error 
             ? 'border-red-300 focus:ring-red-500' 
             : 'border-gray-300 focus:ring-primary'
