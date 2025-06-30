@@ -44,12 +44,16 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
-              <ApperIcon name="Zap" className="w-6 h-6 text-white" />
+<motion.div 
+            className="flex items-center"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="w-12 h-12 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center shadow-xl floating-animation">
+              <ApperIcon name="Zap" className="w-7 h-7 text-white" />
             </div>
-            <span className="ml-3 text-xl font-bold text-dark">Nexus Pro</span>
-          </div>
+            <span className="ml-4 text-2xl font-black text-dark font-display">Creative Studio</span>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -65,13 +69,16 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <Button 
-              variant="primary" 
-              onClick={() => scrollToSection('#contact')}
-            >
-              Get Started
-            </Button>
+<div className="hidden lg:block">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                variant="primary" 
+                onClick={() => scrollToSection('#contact')}
+                className="font-bold"
+              >
+                Let's Create
+              </Button>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}

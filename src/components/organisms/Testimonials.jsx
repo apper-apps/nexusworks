@@ -60,17 +60,21 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
-          <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Client Testimonials
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6">
-            What Our Clients
-            <span className="gradient-text block">Say About Us</span>
+>
+          <motion.span 
+            className="inline-block bg-gradient-to-r from-creative-indigo to-creative-purple text-white px-8 py-4 rounded-full text-lg font-bold mb-6 shadow-2xl"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            💫 Creative Reviews
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
+            What Creative Minds
+            <span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl transform rotate-1">Say About Our Art</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Hear from the businesses we've helped 
-            transform and grow through our innovative solutions.
+          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-body">
+            Discover how we've inspired creators, transformed visions, and pushed the boundaries 
+            of what's possible through our experimental and innovative creative approach.
           </p>
         </motion.div>
 
@@ -90,19 +94,23 @@ const Testimonials = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <button
+<motion.button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
+            whileHover={{ scale: 1.1, rotate: -10 }}
+            whileTap={{ scale: 0.95 }}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full shadow-2xl flex items-center justify-center hover:from-accent hover:to-primary transition-all duration-300"
           >
-            <ApperIcon name="ChevronLeft" className="w-6 h-6" />
-          </button>
+            <ApperIcon name="ChevronLeft" className="w-8 h-8 text-white" />
+          </motion.button>
           
-          <button
+          <motion.button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-200"
+            whileHover={{ scale: 1.1, rotate: 10 }}
+            whileTap={{ scale: 0.95 }}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-full shadow-2xl flex items-center justify-center hover:from-primary hover:to-secondary transition-all duration-300"
           >
-            <ApperIcon name="ChevronRight" className="w-6 h-6" />
-          </button>
+            <ApperIcon name="ChevronRight" className="w-8 h-8 text-white" />
+          </motion.button>
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">

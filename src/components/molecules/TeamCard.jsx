@@ -11,18 +11,19 @@ const TeamCard = ({ member, index }) => {
       viewport={{ once: true }}
       className="group text-center"
     >
-      <div className="relative mb-6">
-        <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+<div className="relative mb-8">
+        <div className="w-40 h-40 mx-auto rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
           <img
             src={member.photo}
             alt={member.name}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-secondary/20 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-creative-orange to-creative-pink rounded-full floating-animation"></div>
       </div>
       
-      <h3 className="text-lg font-bold text-dark mb-1 group-hover:text-primary transition-colors duration-300">
+<h3 className="text-xl font-black text-dark mb-2 group-hover:text-primary transition-colors duration-300 font-display">
         {member.name}
       </h3>
       

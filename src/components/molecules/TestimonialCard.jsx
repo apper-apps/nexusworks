@@ -8,11 +8,12 @@ const TestimonialCard = ({ testimonial, index }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-xl p-8 shadow-lg relative"
+viewport={{ once: true }}
+      className="bg-gradient-to-br from-white via-primary/5 to-secondary/10 rounded-3xl p-10 shadow-2xl relative overflow-hidden"
     >
-      <div className="absolute top-4 left-6 text-primary opacity-20">
-        <ApperIcon name="Quote" className="w-8 h-8" />
+      <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-creative-purple/20 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute top-6 left-8 text-primary opacity-30">
+        <ApperIcon name="Quote" className="w-12 h-12" />
       </div>
       
       <div className="flex mb-4">

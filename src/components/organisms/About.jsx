@@ -46,19 +46,22 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
-          <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            About Nexus Pro
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6">
-            Building Tomorrow's
-            <span className="gradient-text block">Business Solutions Today</span>
+>
+          <motion.span 
+            className="inline-block bg-gradient-to-r from-creative-purple to-creative-pink text-white px-8 py-4 rounded-full text-lg font-bold mb-6 shadow-2xl"
+            whileHover={{ scale: 1.1, rotate: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            🎨 Creative Studio
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
+            Crafting Tomorrow's
+            <span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl transform -rotate-2">Creative Experiences</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-            Founded with a vision to transform how businesses operate in the digital age, 
-            Nexus Pro has been at the forefront of innovation for over 15 years. We combine 
-            strategic thinking with cutting-edge technology to deliver solutions that drive 
-            sustainable growth and competitive advantage.
+          <p className="text-xl text-gray-700 max-w-5xl mx-auto leading-relaxed mb-16 font-body">
+            Born from a passion for pushing creative boundaries, our studio has been pioneering 
+            experimental design for over a decade. We blend artistic vision with cutting-edge 
+            technology to create experiences that inspire, engage, and transform perceptions.
           </p>
         </motion.div>
 
@@ -70,14 +73,19 @@ const About = () => {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
         >
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <ApperIcon name={stat.icon} className="w-8 h-8 text-primary" />
+{stats.map((stat, index) => (
+            <motion.div 
+              key={index} 
+              className="text-center"
+              whileHover={{ scale: 1.1, rotate: Math.random() > 0.5 ? 3 : -3 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-creative-orange to-creative-teal rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl floating-animation" style={{ animationDelay: `${index * 0.5}s` }}>
+                <ApperIcon name={stat.icon} className="w-10 h-10 text-white" />
               </div>
-              <div className="text-3xl font-bold text-dark mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
+              <div className="text-4xl font-black text-dark mb-3 font-display">{stat.value}</div>
+              <div className="text-gray-600 font-body">{stat.label}</div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -88,30 +96,40 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
-        >
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-              <ApperIcon name="Target" className="w-6 h-6 text-primary" />
+>
+          <motion.div 
+            className="bg-gradient-to-br from-primary/10 via-white to-secondary/10 rounded-3xl p-10 shadow-2xl relative overflow-hidden"
+            whileHover={{ scale: 1.02, rotate: 1 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-creative-pink/20 to-transparent rounded-full blur-2xl"></div>
+            <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-8 floating-animation">
+              <ApperIcon name="Target" className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-dark mb-4">Our Mission</h3>
-            <p className="text-gray-600 leading-relaxed">
-              To empower businesses with innovative solutions that drive sustainable growth, 
-              enhance operational efficiency, and create lasting competitive advantages in 
-              an ever-evolving digital landscape.
+            <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Mission</h3>
+            <p className="text-gray-700 leading-relaxed text-lg font-body">
+              To revolutionize creative expression through experimental design, innovative technology, 
+              and boundary-pushing artistry that challenges conventions and inspires new possibilities 
+              in the digital creative landscape.
             </p>
-          </div>
+          </motion.div>
           
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-              <ApperIcon name="Heart" className="w-6 h-6 text-primary" />
+          <motion.div 
+            className="bg-gradient-to-br from-secondary/10 via-white to-accent/10 rounded-3xl p-10 shadow-2xl relative overflow-hidden"
+            whileHover={{ scale: 1.02, rotate: -1 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-creative-teal/20 to-transparent rounded-full blur-2xl"></div>
+            <div className="w-16 h-16 bg-gradient-to-br from-secondary to-creative-orange rounded-2xl flex items-center justify-center mb-8 floating-animation" style={{ animationDelay: '1s' }}>
+              <ApperIcon name="Heart" className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-dark mb-4">Our Values</h3>
-            <p className="text-gray-600 leading-relaxed">
-              We believe in excellence, integrity, and innovation. Our commitment to these 
-              core values drives everything we do, from client relationships to solution 
-              development and ongoing support.
+            <h3 className="text-3xl font-black text-dark mb-6 font-display">Creative Values</h3>
+            <p className="text-gray-700 leading-relaxed text-lg font-body">
+              We embrace experimentation, celebrate uniqueness, and push creative boundaries. 
+              Our commitment to artistic innovation drives every project, fostering environments 
+              where creativity flourishes and bold ideas become reality.
             </p>
-          </div>
+          </motion.div>
         </motion.div>
 
         {/* Team Section */}

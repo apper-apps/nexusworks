@@ -36,17 +36,21 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
-          <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Get In Touch
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6">
-            Ready to Transform
-            <span className="gradient-text block">Your Business?</span>
+>
+          <motion.span 
+            className="inline-block bg-gradient-to-r from-creative-teal to-creative-indigo text-white px-8 py-4 rounded-full text-lg font-bold mb-6 shadow-2xl"
+            whileHover={{ scale: 1.1, rotate: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            🚀 Let's Create Together
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-black text-dark mb-8 leading-none">
+            Ready to Bring Your
+            <span className="gradient-text block font-creative text-6xl md:text-7xl lg:text-8xl transform -rotate-1">Creative Vision to Life?</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Let's discuss your project and explore how Nexus Pro can help you achieve 
-            your business goals. Get in touch with our team today.
+          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-body">
+            Let's collaborate on something extraordinary. Share your creative dreams and let's 
+            transform them into stunning realities that push boundaries and inspire wonder.
           </p>
         </motion.div>
 
@@ -60,19 +64,24 @@ const Contact = () => {
             className="space-y-8"
           >
             {contactInfo.map((info, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <ApperIcon name={info.icon} className="w-6 h-6 text-primary" />
+<motion.div 
+                key={index} 
+                className="flex items-start space-x-6"
+                whileHover={{ scale: 1.02, x: 10 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center flex-shrink-0 shadow-2xl floating-animation" style={{ animationDelay: `${index * 0.5}s` }}>
+                  <ApperIcon name={info.icon} className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-dark mb-2">{info.title}</h3>
+                  <h3 className="font-black text-dark mb-3 text-lg font-display">{info.title}</h3>
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-600 text-sm">
+                    <p key={idx} className="text-gray-600 text-base font-body mb-1">
                       {detail}
                     </p>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
 
             {/* Social Links */}
