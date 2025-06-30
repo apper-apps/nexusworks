@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ServiceCard from '@/components/molecules/ServiceCard'
+import ServiceDetailModal from '@/components/molecules/ServiceDetailModal'
 import Loading from '@/components/ui/Loading'
 import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
@@ -10,6 +11,8 @@ const Services = () => {
   const [services, setServices] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [selectedServiceId, setSelectedServiceId] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const loadServices = async () => {
     try {
@@ -22,6 +25,16 @@ const Services = () => {
     } finally {
       setLoading(false)
     }
+}
+
+  const handleServiceSelect = (serviceId) => {
+    setSelectedServiceId(serviceId)
+    setIsModalOpen(true)
+  }
+
+  const handleModalClose = () => {
+    setIsModalOpen(false)
+    setSelectedServiceId(null)
   }
 
   useEffect(() => {
@@ -55,12 +68,13 @@ className="text-center mb-16"
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={service.Id}
               service={service}
               index={index}
+              onLearnMore={handleServiceSelect}
             />
           ))}
         </div>
@@ -92,8 +106,14 @@ className="text-center mt-16"
               Let's Talk
             </motion.button>
           </div>
-        </motion.div>
+</motion.div>
       </div>
+
+      <ServiceDetailModal
+        isOpen={isModalOpen}
+        onClose={handleModalClose}
+        serviceId={selectedServiceId}
+      />
     </section>
   )
 }

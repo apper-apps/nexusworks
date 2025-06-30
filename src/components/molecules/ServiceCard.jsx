@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ApperIcon from '@/components/ApperIcon'
 
-const ServiceCard = ({ service, index }) => {
+const ServiceCard = ({ service, index, onLearnMore }) => {
 return (
 <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -32,8 +32,11 @@ return (
         ))}
       </ul>
       
-      <div className="mt-6 pt-6 border-t border-gray-100">
-        <button className="text-primary font-medium hover:text-primary-dark transition-colors duration-200 inline-flex items-center group">
+<div className="mt-6 pt-6 border-t border-gray-100">
+        <button 
+          onClick={() => onLearnMore(service.Id)}
+          className="text-primary font-medium hover:text-primary-dark transition-colors duration-200 inline-flex items-center group"
+        >
           Learn More
           <ApperIcon name="ArrowRight" className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
         </button>
